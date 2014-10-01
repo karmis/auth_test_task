@@ -18,8 +18,8 @@ class Config
         'db' => array(
             'host' => 'localhost',
             'name' => 'test_task',
-            'user' => 'root',
-            'pass' => 'Vjybrf33'
+            'user' => '*',
+            'pass' => '*'
         ),
         'file' => array(
             'path' => 'uploads/',

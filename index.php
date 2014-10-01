@@ -19,12 +19,12 @@ if (isset($_POST['act'])) {
     if ($isAuth == true) {
         $user = new UserEntity();
         $user = $user->getUser();
-        $tpl = include_once('tpl/content.tpl.html');
+        $tpl = 'tpl/content.tpl.html';
     } else {
         if ($action == 'register') {
-            $tpl = include_once('tpl/register.tpl.html');
+            $tpl = 'tpl/register.tpl.html';
         } else {
-            $tpl = include_once('tpl/login.tpl.html');
+            $tpl = 'tpl/login.tpl.html';
         }
     }
 
