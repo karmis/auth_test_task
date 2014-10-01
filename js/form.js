@@ -21,11 +21,21 @@
             contentType: false,
             dataType: 'json',
             success: function(data){
-                if(data.code == 200){
+                if(data.status == 'success'){
                     window.location.href = document.URL;
                 } else {
-                    debugger;
-                   form.find('button').button('reset');
+                    var title = '';
+                    if(data.status == 'validate'){
+                        title = 'Ошибка валидации';
+                    } else if(data.status == 'error'){
+                        title = 'Важная ошибка';
+                    }
+
+
+                    $('#modal #title').text(title);
+                    $('#modal #body').text(data.message);
+                    $('#modal').modal();
+
                 }
             }
         })
