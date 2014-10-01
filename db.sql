@@ -4,6 +4,6 @@ CREATE TABLE IF NOT EXISTS `users` (
     `password` VARCHAR(255) NOT NULL,
     `email` VARCHAR(255) NOT NULL UNIQUE,
     `news` BOOLEAN NOT NULL DEFAULT FALSE ,
-    `avatar_path` VARCHAR(255) NULL,
+    `avatarPath` VARCHAR(255) NULL,
     `salt` VARCHAR(100) NOT NULL
 ) ENGINE=INNODB;
