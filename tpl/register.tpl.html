@@ -1,0 +1,134 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <strong class="">Вход</strong>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal form-validate form-ajax"
+                      enctype="multipart/form-data"
+                      data-bv-message="Это значение неверно"
+                      data-bv-feedbackicons-valid="glyphicon glyphicon-ok"
+                      data-bv-feedbackicons-invalid="glyphicon glyphicon-remove"
+                      data-bv-feedbackicons-validating="glyphicon glyphicon-refresh">
+                    <div class=" form-group">
+                        <label for="username" class="col-sm-3 control-label">Логин</label>
+
+                        <div class="col-sm-9">
+                            <input name="username" type="text" id="username" class="form-control"
+                                   placeholder="Логин"
+                                   autofocus
+                                   required="required"
+                                   data-bv-message="Такой логин недопустим"
+
+                                   data-bv-notempty="true"
+                                   data-bv-notempty-message="Поле Логин не может быть пустым"
+
+                                   data-bv-regexp="true"
+                                   data-bv-regexp-regexp="^[a-zA-Z0-9_\.]+$"
+                                   data-bv-regexp-message="Логин может содержать только буквы латинского алфавита, цифры, подчеркивание и точку"
+
+                                   data-bv-stringlength="true"
+                                   data-bv-stringlength-min="4"
+                                   data-bv-stringlength-max="30"
+                                   data-bv-stringlength-message="Логин должен быть не короче 4 символо и не больше 30"
+
+                                   data-bv-different="true"
+                                   data-bv-different-field="password"
+                                   data-bv-different-message="Логин не может быть таким же как и пароль"
+                                    />
+                        </div>
+                    </div>
+
+                    <div class=" form-group">
+                        <label for="email" class="col-sm-3 control-label">Email</label>
+
+                        <div class="col-sm-9">
+                            <input name="email" type="text" id="email" class="form-control"
+                                   placeholder="Ваш email"
+                                   autofocus
+                                   required="required"
+                                   data-bv-emailaddress="true"
+                                   data-bv-emailaddress-message="Введите правильный email"
+                                    />
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="password" class="col-sm-3 control-label">Пароль</label>
+
+                        <div class="col-sm-9">
+                            <input name="password" type="password" id="password" class="form-control"
+                                   placeholder="Пароль"
+                                   required="required"
+                                   data-bv-notempty="true"
+                                   data-bv-notempty-message="Поле Пароль не может быть пустым"
+
+                                   data-bv-identical="true"
+                                   data-bv-identical-field="password_repeat"
+                                   data-bv-identical-message="Пароли не совпадают"
+
+                                   data-bv-different="true"
+                                   data-bv-different-field="username"
+                                   data-bv-different-message="Пароль не может быть таким же как и логин"
+                                    />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password_repeat" class="col-sm-3 control-label">Повторите пароль</label>
+
+                        <div class="col-sm-9">
+                            <input name="password_repeat" type="password" id="password_repeat" class="form-control"
+                                   placeholder="Повторите пароль"
+                                   required="required"
+                                   data-bv-notempty="true"
+                                   data-bv-notempty-message="Поле Повторите пароль не может быть пустым"
+
+                                   data-bv-identical="true"
+                                   data-bv-identical-field="password"
+                                   data-bv-identical-message="Пароли не совпадают"
+
+                                   data-bv-different="true"
+                                   data-bv-different-field="username"
+                                   data-bv-different-message="Пароль не может быть таким же как и логин"
+                                    />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="avatar" class="col-sm-3 control-label">Аватар</label>
+
+                        <div class="col-sm-9">
+                            <input name="avatar" type="file" id="avatar" accept="image/*" class="form-control"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <div class="checkbox">
+                                <label class="" for="news">
+                                    <input type="checkbox" name="news" id="news" class="" value="1" checked>
+                                    Подписаться на новости
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group last">
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <input type="hidden" name="act" value="register">
+                            <button type="submit" class="btn btn-success btn-sm" data-loading-text="Регистрируемся">Регистрироваться</button>
+                            <button type="reset" class="btn btn-default btn-sm" data-loading-text="Регистрируемся">Сбросить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="panel-footer">
+                Уже зарегистрированы?
+                <a href="./?action=login" class="">Войти</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
