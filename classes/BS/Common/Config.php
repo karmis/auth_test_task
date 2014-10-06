@@ -18,12 +18,12 @@ class Config
         'db' => array(
             'host' => 'localhost',
             'name' => 'test_task',
-            'user' => '*',
-            'pass' => '*'
+            'user' => 'root',
+            'pass' => 'Vjybrf33'
         ),
         'file' => array(
             'path' => 'uploads/',
-            'max_size' => '204800',
+            'max_size' => '504800',
             'exts' => array('png', 'gif','jpeg', 'jpg')
         )
     );

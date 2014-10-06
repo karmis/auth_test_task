@@ -67,7 +67,7 @@ class UserController extends BaseController
 
 
         $user = new UserEntity();
-        if (!empty($_FILES['avatar'])) {
+        if (!empty($_FILES['avatar']['name'])) {
             $avatarPath = $user->upload($_FILES['avatar']);
         } else {
             $avatarPath = null;
